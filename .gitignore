@@ -1,0 +1,34 @@
+## Data & embeddings (download separately)
+data/
+final_dataset/
+
+## Model checkpoints
+weights/
+
+## Logs & results
+logs/
+result/
+
+## Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+
+## Compiled Cython (regenerated via setup.py)
+models/General/base/evaluator/*.so
+models/General/base/evaluator/*.c
+
+## Jupyter
+.ipynb_checkpoints/
+
+## Editor
+.vscode/
+.idea/
+*.swp
+
+## OS
+.DS_Store

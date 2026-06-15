@@ -1,0 +1,9 @@
+numpy
+scipy
+pandas
+matplotlib
+tqdm
+wandb
+reckit==0.2.4
+Cython
+gdown>=4.7

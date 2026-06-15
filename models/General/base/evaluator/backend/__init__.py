@@ -1,0 +1,6 @@
+try:
+    from .cpp.uni_evaluator import UniEvaluator
+    print("Evaluate model with cpp")
+except (ImportError, ValueError):
+    from .python.uni_evaluator import UniEvaluator
+    print("Evaluate model with python (cpp unavailable)")
