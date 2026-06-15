@@ -120,6 +120,17 @@ data/General/
 ## Training
 
 ```bash
+# AlphaRec baseline on Clothing (text-only, v3 embeddings)
+python main.py \
+  --model_name AlphaRec --dataset amazon_clothing \
+  --lm_model v3 --model_version mlp \
+  --n_layers 2 --tau 0.15 \
+  --train_norm --pred_norm \
+  --neg_sample 256 --infonce 1 \
+  --saveID alpharec --no_wandb
+```
+
+```bash
 # ViTIC-VLM on Clothing
 python main.py \
   --model_name ViTIC --dataset amazon_clothing \

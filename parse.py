@@ -6,7 +6,7 @@ def parse_args():
 
     # ── General ──────────────────────────────────────────────────────────
     parser.add_argument('--model_name', type=str, required=True,
-                        help='ViTIC | LightGCN | MF | MultVAE | SGL | XSimGCL')
+                        help='ViTIC | AlphaRec | LightGCN | MF | MultVAE | SGL | XSimGCL')
     parser.add_argument('--dataset', type=str, required=True,
                         help='amazon_clothing | amazon_beauty')
     parser.add_argument('--cuda', type=int, default=0)
@@ -49,6 +49,13 @@ def parse_args():
         parser.add_argument('--lm_model', type=str, default='qwenvl_8b',
                             choices=['qwentext_8b', 'qwenvl_8b', 'qwenvl_8b_image',
                                      'qwentext_qwenvlimg_8b'])
+        parser.add_argument('--model_version', type=str, default='mlp',
+                            choices=['mlp', 'homo'])
+
+    # ── AlphaRec-specific ─────────────────────────────────────────────────
+    if args.model_name == 'AlphaRec':
+        parser.add_argument('--tau', type=float, default=0.15)
+        parser.add_argument('--lm_model', type=str, default='v3')
         parser.add_argument('--model_version', type=str, default='mlp',
                             choices=['mlp', 'homo'])
 
